@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin M. DeLuca | Communication & Environmental Studies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background-color: #fafaf9;
+        }
+        
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #e8e8e8;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: normal;
+        }
+        
+        .contact-info {
+            font-size: 0.95rem;
+            color: #777;
+            margin-top: 1rem;
+        }
+        
+        .contact-info a {
+            color: #2c3e50;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .contact-info a:hover {
+            border-bottom-color: #2c3e50;
+        }
+        
+        nav {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 0.95rem;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        
+        nav a:hover, nav a.active {
+            border-bottom-color: #2c3e50;
+        }
+        
+        main {
+            background-color: #fff;
+            padding: 3rem 2rem;
+            border-radius: 2px;
+        }
+        
+        section {
+            display: none;
+        }
+        
+        section.active {
+            display: block;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #e8e8e8;
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        
+        .research-statement {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .publication-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .publication-item .year {
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        .publication-item .title {
+            font-weight: 600;
+        }
+        
+        .publication-item .venue {
+            font-style: italic;
+            color: #666;
+        }
+        
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .education-item .degree {
+            font-weight: 600;
+        }
+        
+        .education-item .institution {
+            color: #666;
+        }
+        
+        .education-item .year {
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+            padding: 2rem;
+            border-top: 1px solid #e8e8e8;
+            margin-top: 3rem;
+        }
+        
+        .scholar-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.25rem;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            text-decoration: none;
+            color: #2c3e50;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+        
+        .scholar-link:hover {
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kevin M. DeLuca</h1>
+            <p class="subtitle">Professor of Communication, University of Utah</p>
+            <div class="contact-info">
+                Department of Communication | 255 South Central Campus Dr, Rm 2615 | Salt Lake City, UT 84112<br>
+                <a href="mailto:kevin.deluca@utah.edu">kevin.deluca@utah.edu</a> | (512) 913-5898<br>
+                <a href="https://scholar.google.com/citations?user=UiY7hKwAAAAJ&hl=en&inst=10071918391604227458" target="_blank">Google Scholar Profile</a>
+            </div>
+            <nav>
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#publications" class="nav-link" data-section="publications">Publications</a>
+                <a href="#works-in-progress" class="nav-link" data-section="works-in-progress">Works in Progress</a>
+                <a href="#teaching" class="nav-link" data-section="teaching">Teaching & Mentorship</a>
+                <a href="#lectures" class="nav-link" data-section="lectures">Selected Lectures</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <!-- HOME -->
+        <section id="home" class="active">
+            <p class="research-statement">
+                My scholarly work examines environmental activism, visual rhetoric, and digital media, with particular emphasis on how social movements mobilize public attention through image events and networked communication. Over the past two decades, I have developed an analytical framework centered on what I call "wild public screens"—spaces where activism encounters censorship, surveillance, and the contingencies of digital platforms. My recent research explores environmental movements in China, where I investigate how activists navigate state control to articulate alternative visions of ecological futures.
+            </p>
+            <p>
+                I teach courses in media theory, visual rhetoric, environmental communication, and the politics of technology. I am interested in how communication shapes our relationship to nature, how images generate political force, and how digital media enable—and constrain—forms of collective action.
+            </p>
+        </section>
+        
+        <!-- ABOUT -->
+        <section id="about">
+            <h2>About</h2>
+            
+            <h3>Current Position</h3>
+            <p>Professor, Department of Communication, University of Utah (2013–present)</p>
+            <p>Adjunct Professor, Environmental Humanities Graduate Program, University of Utah</p>
+            <p>Adjunct Professor, Asia Center, University of Utah</p>
+            
+            <h3>Education</h3>
+            <div class="education-item">
+                <div class="degree">Ph.D., Department of Communication Studies</div>
+                <div class="institution">University of Iowa, 1996</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">M.A., Communication</div>
+                <div class="institution">University of Massachusetts, 1991</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">B.A., English (cum laude)</div>
+                <div class="institution">University of Massachusetts, 1985</div>
+            </div>
+            
+            <h3>Research Interests</h3>
+            <p>Environmental discourse and activism • Visual rhetoric and image events • Digital media and social movements • Critical media studies • Rhetoric and public deliberation • Environmental humanities • China's emerging public sphere</p>
+        </section>
+        
+        <!-- PUBLICATIONS -->
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <h3>Books</h3>
+            <div class="publication-item">
+                <div><span class="title">Image Politics: The New Rhetoric of Environmental Activism</span></div>
+                <div class="venue">Guilford Press, New York (1999; reprinted 2005, Routledge)</div>
+            </div>
+            
+            <h3>Selected Journal Articles</h3>
+            <div class="publication-item">
+                <span class="year">2024</span> | <span class="title">"Digital/Social Media as Environment."</span> <span class="venue">Environmental Communication</span> 15:5.
+            </div>
+            <div class="publication-item">
+                <span class="year">2021</span> | <span class="title">"Extinction Rebellion's Image Events, Social Media, and the Eclipse of the Earth."</span> <span class="venue">Social Anthropology</span> 29.
+            </div>
+            <div class="publication-item">
+                <span class="year">2021</span> | <span class="title">"I Provoke, Therefore I Am."</span> <span class="venue">International Journal of Communication</span> 15 (with Betlemidze).
+            </div>
+            <div class="publication-item">
+                <span class="year">2021</span> | <span class="title">"Mobilizing the public in saving the Bonneville salt flats: Understanding blame as a psychological construct."</span> <span class="venue">Environmental Communication</span> 15(3): 301–319 (with Sun, Y., O'Neill, L., Liu, M., & Bowen, B).
+            </div>
+            <div class="publication-item">
+                <span class="year">2019</span> | <span class="title">"Image events amidst eco-ruins: social media and the mediated earth."</span> <span class="venue">Communication and Critical/Cultural Studies</span> (special issue on <span class="venue">Image Politics</span> at Twenty).
+            </div>
+            <div class="publication-item">
+                <span class="year">2019</span> | <span class="title">"Creative Cultural Studies: encountering African elephants in China."</span> <span class="venue">Culture, Theory and Critique</span>.
+            </div>
+            <div class="publication-item">
+                <span class="year">2019</span> | <span class="title">"Creative Confrontations: Exploring Activism, Surveillance, and Censorship in China and the United States."</span> <span class="venue">Journal of Psychology & the Behavioral Sciences</span> (with E. Brunner).
+            </div>
+            <div class="publication-item">
+                <span class="year">2018</span> | <span class="title">"The Queen is Dead; Long Live the Queen."</span> <span class="venue">Argumentation and Advocacy</span> 54:4 (with Betlemidze).
+            </div>
+            <div class="publication-item">
+                <span class="year">2016</span> | <span class="title">"The Argumentative Force of Image Networks: Greenpeace's Panmediated Global Detox Campaign."</span> <span class="venue">Argumentation and Advocacy</span> 52 (with Brunner, E.).
+            </div>
+            <div class="publication-item">
+                <span class="year">2016</span> | <span class="title">"Weibo, WeChat, and the Transformative Events of Environmental Activism in China."</span> <span class="venue">International Journal of Communication</span> 10 (with Brunner and Sun).
+            </div>
+            <div class="publication-item">
+                <span class="year">2015</span> | <span class="title">"Exploring environmentalism amidst the clamour of networks: A social network analysis of Utah environmental organizations."</span> <span class="venue">Environmental Communication</span> (with Sun, Y. and Seegert, N.).
+            </div>
+            <div class="publication-item">
+                <span class="year">2012</span> | <span class="title">"Occupy Wall Street on the Public Screens of Social Media: The Many Framings of the Birth of a Social Movement."</span> <span class="venue">Communication, Culture & Critique</span> 5:4, pp. 483–509 (with Lawson, S. and Sun, Y.).
+            </div>
+            <div class="publication-item">
+                <span class="year">2011</span> | <span class="title">"Interrupting the World As It Is: Thinking Amidst the Corporatocracy and in the Wake of Tunisia, Egypt, and Wisconsin."</span> <span class="venue">Critical Studies in Media Communication</span> 28:2, pp. 86–93.
+            </div>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #666;"><em>For a complete list of publications, including additional book chapters and peer-reviewed articles, see Google Scholar profile.</em></p>
+            
+            <a href="https://scholar.google.com/citations?user=UiY7hKwAAAAJ&hl=en&inst=10071918391604227458" target="_blank" class="scholar-link">View Full Publication Record</a>
+        </section>
+        
+        <!-- WORKS IN PROGRESS -->
+        <section id="works-in-progress">
+            <h2>Works in Progress</h2>
+            <div class="publication-item">
+                <div><span class="title">The Wild Public Screens of China: Environmental Activism, Social Media, and the Emerging (Un)Civil Society</span></div>
+                <div class="venue">With E. Brunner (under review)</div>
+            </div>
+            <div class="publication-item">
+                <div><span class="title">Creating Wilderness: Imaging Environmentalism's Sublime Object</span></div>
+            </div>
+            <div class="publication-item">
+                <div><span class="title">AI, Techno-Humanism, and the Eclipse of Nature: The Spoils of Progress</span></div>
+            </div>
+            <div class="publication-item">
+                <div><span class="title">Engaging the Toxic Beautiful: Huang Xu's Fragments</span></div>
+                <div class="venue">With E. Brunner</div>
+            </div>
+            <div class="publication-item">
+                <div><span class="title">The Force of Rhetoric: A Reconceptualization</span></div>
+                <div class="venue">With N. Paliewicz</div>
+            </div>
+        </section>
+        
+        <!-- TEACHING & MENTORSHIP -->
+        <section id="teaching">
+            <h2>Teaching & Mentorship</h2>
+            
+            <h3>Courses Taught</h3>
+            <p>Communication Technology and Culture • Media Theory • Visual Rhetoric and Politics • Media and Popular Culture • Environmental Communication</p>
+            
+            <h3>Doctoral Mentorship</h3>
+            <p>Chair for 10 Ph.D. students at University of Utah; chair for 8 Ph.D. students at University of Georgia and Penn State University</p>
+            
+            <h3>Professional Service</h3>
+            <p>College of Humanities Retention, Promotion, and Tenure Committee • Graduate Committee • Graduate Admissions Committee, Environmental Humanities • Faculty Senate • Co-Director, Summer Study Abroad Program, Beijing (2011)</p>
+            
+            <h3>Editorial Boards</h3>
+            <p><span class="venue">Quarterly Journal of Speech</span> • <span class="venue">Environmental Communication</span> • <span class="venue">Rhetoric & Public Affairs</span> • <span class="venue">Critical Studies in Media Communication</span></p>
+        </section>
+        
+        <!-- SELECTED LECTURES -->
+        <section id="lectures">
+            <h2>Selected Invited Lectures</h2>
+            <div class="publication-item">
+                <span class="year">2025</span> | "Saving Nature in a Digital World." City University of Hong Kong.
+            </div>
+            <div class="publication-item">
+                <span class="year">2022</span> | "Social Media, Global Surveillance Society, and the Embers of Activism: China as Prototype." Vienna University.
+            </div>
+            <div class="publication-item">
+                <span class="year">2022</span> | "The Peril and Promise of Social Media Activism in a Global Surveillance Society." Penn State University.
+            </div>
+            <div class="publication-item">
+                <span class="year">2019</span> | "The Wild Public Screens of China: Citizens on Social Media Networks." University of Washington.
+            </div>
+            <div class="publication-item">
+                <span class="year">2016</span> | "Events of Wildness: Salvaging Wilderness Amidst the Tsunami of Humanism." Rhetoric at Reno, University of Nevada, Reno.
+            </div>
+            <div class="publication-item">
+                <span class="year">2015</span> | "Creating Wilderness with Photographs: Images and Environmentalism." Ogden, Utah.
+            </div>
+            <div class="publication-item">
+                <span class="year">2013</span> | "China and Social Media: Exploring New Forms of Activism." Eastern Illinois University.
+            </div>
+            <div class="publication-item">
+                <span class="year">2012</span> | "China, Social Media, and Saving the Earth: Deploying Decentered Knots of World-Making to Challenge the Global Corporatocracy." University of Nevada, Reno.
+            </div>
+            <div class="publication-item">
+                <span class="year">2009</span> | "Framing China: US Media, Global Warming, and the Chinese 'Threat.'" Lingnan University, Hong Kong.
+            </div>
+            <div class="publication-item">
+                <span class="year">2005</span> | "Picturing the Earth, Interrupting the World." Center for Global Communication and Culture, Northwestern University.
+            </div>
+            <div class="publication-item">
+                <span class="year">2003</span> | "The Speed of Immanent Images: The Dangers of Reading Photographs." Image & Critique, Nottingham University, England (Invited Plenary Speaker).
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Kevin M. DeLuca. University of Utah, Department of Communication.</p>
+    </footer>
+    
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Hide all sections
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Remove active from all nav links
+                document.querySelectorAll('.nav-link').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                
+                // Show selected section
+                const sectionId = link.dataset.section;
+                document.getElementById(sectionId).classList.add('active');
+                link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
